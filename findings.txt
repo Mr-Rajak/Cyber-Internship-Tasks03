@@ -1,0 +1,13 @@
+Scan source: sample_report_127.0.0.1.txt  (raw output)
+
+High-level findings:
+- Nessus web UI listening on TCP 8834 (NessusWWW). :contentReference[oaicite:17]{index=17}
+- Apache and nginx binaries/packages detected on host. 
+- OpenSSL libraries present (versions observed: 3.4.0 and 3.0.16 noted in plugin output). 
+- PHP 8.4.4 installed. Check PHP extensions and default configs. :contentReference[oaicite:20]{index=20}
+- PostgreSQL client/server components present (PostgreSQL 17.4 metadata). :contentReference[oaicite:21]{index=21}
+- Java / OpenJDK detected (JRE/JDK 21.x). Validate JVM security patches. :contentReference[oaicite:22]{index=22}
+- libcurl / curl libraries present (libcurl 8.12.1). Check for CVEs. :contentReference[oaicite:23]{index=23}
+- Netstat shows multiple established outbound TLS connections (normal but note open services). :contentReference[oaicite:24]{index=24}
+
+Actionable next steps: run package updates, review TLS cipher settings, and perform targeted per-package CVE lookups for the versions listed above.
