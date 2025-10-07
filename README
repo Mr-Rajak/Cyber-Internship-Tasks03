@@ -1,0 +1,23 @@
+Basic-vulnerability-scan-task-3
+
+This repository contains artifacts from a basic vulnerability scan of the local host (localhost / `example`) using Nessus Essentials.
+
+Contents
+- `REPORT.md` — concise analysis & recommended actions.  
+- `findings.txt` — short bullet list of the main findings.  
+- `mitigations.txt` — short remediation steps.  
+- `sample_report_127.0.0.1.txt` — raw scan output (evidence).
+
+How I produced these files
+1. Launched Nessus Essentials and scanned `127.0.0.1` (localhost).  
+2. Exported raw scan/log output to `sample_report_127.0.0.1.txt`.  
+3. Reviewed raw output and extracted top findings (services, package versions, and open/listening ports).  
+4. Wrote `REPORT.md`, `findings.txt`, and `mitigations.txt`.
+
+Notes & privacy
+- The raw scan file contains local package and service metadata. No external/private customer data intentionally included. If you plan to publish this repo publicly, review `sample_report_127.0.0.1.txt` and remove any sensitive local usernames or host-specific details.
+
+Interview prep (short Q&A)
+- What is a vulnerability scan? A scan that enumerates services and checks known vulnerabilities using signature/plugin rules.  
+- How to verify a finding? Validate version strings, reproduce the condition, and consult vendor CVE advisories.  
+- Actions on critical findings: Patch, block network access, rotate credentials, and re-scan.
