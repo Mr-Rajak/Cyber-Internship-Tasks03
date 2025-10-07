@@ -1,0 +1,8 @@
+- Nessus UI (8834): restrict access to localhost or firewall-rule to admin IPs; enable strong auth. :contentReference[oaicite:25]{index=25}
+- Apache/nginx: ensure latest security patches applied and disable unused modules. :contentReference[oaicite:26]{index=26}
+- OpenSSL: update to latest packaged OpenSSL; disable old TLS versions and weak ciphers. :contentReference[oaicite:27]{index=27}
+- PHP: update PHP to latest supported 8.4.x patch level and disable risky extensions; review php.ini. :contentReference[oaicite:28]{index=28}
+- PostgreSQL: restrict listen_addresses to localhost if not needed externally; enforce strong DB authentication. :contentReference[oaicite:29]{index=29}
+- Java/OpenJDK: update JDK/JRE to latest security update and remove unused runtimes. :contentReference[oaicite:30]{index=30}
+- libcurl/curl: update package; check for known CVEs and patch. :contentReference[oaicite:31]{index=31}
+- General: run `apt update && apt upgrade` (or distribution equivalent), reboot if kernel updated, and re-scan to confirm fixes.
